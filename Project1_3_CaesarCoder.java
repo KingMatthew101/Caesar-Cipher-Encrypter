@@ -79,31 +79,23 @@ public class Project1_3_CaesarCoder {
 	}
 
 	// Linear-search function to find the index of an element
-    public static int findIndex(String array[], String letter)
-    {
+   	public static int findIndex(String array[], String letter)
+    	{
+        	if (array == null) {
+			return -1;
+        	}
   
-        // if array is Null
-        if (array == null) {
-            return -1;
-        }
+        	int arrayLength = array.length;
+        	int i = 0;
   
-        // find length of array
-        int arrayLength = array.length;
-        int i = 0;
-  
-        // traverse in the array
-        while (i < arrayLength) {
-        	
-            // if the i-th element is letter
-            // then return the index
-            if (array[i].equalsIgnoreCase(letter)) {
-                return i;
-            }
-            else {
-                i = i + 1;
-            }
-        }
-        return -1;
-    }
+        	while (i < arrayLength) {
+            		if (array[i].equalsIgnoreCase(letter)) {
+                		return i;
+            		} else {
+                		i = i + 1;
+            		}
+        	}
+        	return -1;
+    	}
 	
 }
